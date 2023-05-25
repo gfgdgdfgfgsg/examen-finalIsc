@@ -46,6 +46,32 @@ public class principal {
             total += clase.get(i).getNicotina();
         }
         System.out.println(total);
+
+        cajetillasCigarros();
+    }
+    public static void cajetillasCigarros(){
+        int total = 0;
+        int excedente = 0;
+        int cajetillas = 0;
+        int matricula = 64610;
+        if (matricula % 2 == 0) {
+            cajetillas = 14;
+        } else {
+            cajetillas = 20;
+        }
+        for (int i = 0; i < clase.size(); i++) {
+            total += clase.get(i).getCantHojas();
+            total += clase.get(i).getTempoPicado();
+            total += clase.get(i).getAroma();
+            total += clase.get(i).getAzucar();
+            total += clase.get(i).getNicotina();
+        }
+        if (total > cajetillas) {
+            excedente = total - cajetillas;
+            System.out.println("Cajetillas: " + cajetillas + "\nExcedente: " + excedente);
+        } else {
+            System.out.println("Cajetillas: " + cajetillas + "\nExcedente: " + excedente);
+        }
     }
 
 }
