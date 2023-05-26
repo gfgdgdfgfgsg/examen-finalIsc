@@ -33,8 +33,6 @@ public class principal {
 
         cantidadCigarros();
     }
-
-    //Realice un método para su clase que obtenga la cantidad de cigarrillos que obtuvo del proceso.
     public static void cantidadCigarros() {
 
         int total = 0;
